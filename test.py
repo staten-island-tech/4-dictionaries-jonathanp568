@@ -1,4 +1,4 @@
-items =[ {
+items = [ {
     "name": "Soda",
     "price": 2.00,
     "company": "Coca Cola"},
@@ -18,12 +18,9 @@ items =[ {
     "name": "Chips",
     "price": 4.00,
     "company": "Lays"}]
-""" storage = [item1, item2, item3, item4, item5]
-cart = []
-intro = input("Choose items. Type confirm to check out.")
-confirm = str(confirm)
-while intro != confirm:
-    if intro == item1: """
 
-for item in items:
-    print(item['name'], item['company'])
+welcome = input("What would you like to buy? Type confirm to check out.")
+print(items)
+while welcome != "confirm":
+    if welcome == "Soda":
+        print(items[0]["name"])
