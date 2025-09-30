@@ -18,9 +18,31 @@ items = [ {
     "name": "Chips",
     "price": 4.00,
     "company": "Lays"}]
-
-welcome = input("What would you like to buy? Type confirm to check out.")
-print(items)
+cart = []
+total = 0
+welcome = input(f"What would you like to buy? {enumerate(items)} Type confirm to check out.")
 while welcome != "confirm":
     if welcome == "Soda":
-        print(items[0]["name"])
+        welcome = input("Would you like to buy anything else?")
+        cart.append(items[0]["name"])
+        total += items[0]["price"]
+    elif welcome == "Crayons":
+        welcome = input("Would you like to buy anything else?")
+        cart.append(items[1]["name"])
+        total += items[1]["price"]
+    elif welcome == "Toothpaste":
+        welcome = input("Would you like to buy anything else?")
+        cart.append(items[2]["name"])
+        total += items[2]["price"]
+    elif welcome == "IPhone":
+        welcome = input("Would you like to buy anything else?")
+        cart.append(items[3]["name"])
+        total += items[3]["price"]
+    elif welcome == "Chips":
+        welcome = input("Would you like to buy anything else?")
+        cart.append(items[4]["name"])
+        total += items[4]["price"]
+    else:
+        welcome = input("We don't have that here.")
+print(f"You have purchased:{cart}")
+print(f"The total is:{total}")
