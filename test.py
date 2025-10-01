@@ -20,7 +20,7 @@ items = [ {
     "company": "Lays"}]
 cart = []
 total = 0
-welcome = input("What would you like to buy? We have Soda, Crayons, Toothpaste, IPhone, and Chips. Type confirm to check out.")
+welcome = input(f"What would you like to buy? {items} Type confirm to check out.")
 while welcome != "confirm":
     if welcome == "Soda":
         welcome = input("Would you like to buy anything else?")
